@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APS Consult | Conseil en cybersécurité, architecture IT et solutions Microsoft</title>
+  <meta name="description" content="APS Consult — conseil indépendant en cybersécurité, architecture IT et solutions Microsoft (Sentinel, Defender XDR, Entra ID, Azure). Belgique et international.">
+  <meta name="theme-color" content="#07111f">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <link rel="canonical" href="https://pujado.be/">
+  <link rel="alternate" hreflang="fr" href="https://pujado.be/">
+  <link rel="alternate" hreflang="en" href="https://pujado.be/en/">
+  <link rel="alternate" hreflang="x-default" href="https://pujado.be/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/InterDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/main.js"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="APS Consult">
+  <meta property="og:locale" content="fr_BE">
+  <meta property="og:title" content="APS Consult | Conseil en cybersécurité, architecture IT et solutions Microsoft">
+  <meta property="og:description" content="APS Consult — conseil indépendant en cybersécurité, architecture IT et solutions Microsoft (Sentinel, Defender XDR, Entra ID, Azure). Belgique et international.">
+  <meta property="og:url" content="https://pujado.be/">
+  <meta property="og:image" content="https://pujado.be/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="APS Consult — Cybersecurity and Microsoft solutions">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="APS Consult | Conseil en cybersécurité, architecture IT et solutions Microsoft">
+  <meta name="twitter:description" content="APS Consult — conseil indépendant en cybersécurité, architecture IT et solutions Microsoft (Sentinel, Defender XDR, Entra ID, Azure). Belgique et international.">
+  <meta name="twitter:image" content="https://pujado.be/assets/og-image.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"APS Consult","url":"https://pujado.be/","email":"contact@pujado.be","legalName":"APS Consult SRL","vatID":"BE0657805597","address":{"@type":"PostalAddress","streetAddress":"Avenue du Clairpré 22","postalCode":"1410","addressLocality":"Waterloo","addressCountry":"BE"},"description":"APS Consult — conseil indépendant en cybersécurité, architecture IT et solutions Microsoft (Sentinel, Defender XDR, Entra ID, Azure). Belgique et international.","areaServed":["BE","EU"],"knowsLanguage":["fr","en","es"],"knowsAbout":["Cybersecurity","Microsoft Sentinel","Microsoft Defender XDR","Microsoft Entra ID","Azure","IT architecture","Identity and access management"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div class="topline"></div>
+<header class="site-header"><div class="wrap nav">
+  <a class="brand" href="/" aria-label="APS Consult — accueil"><b>APS CONSULT<i>.</i></b><small>Cybersécurité et solutions Microsoft</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" data-open="Menu" data-close="Fermer">Menu</button>
+  <div class="nav-panel" id="nav-panel">
+    <nav aria-label="Navigation principale"><a href="/#services">Expertises</a><a href="/#approach">Approche</a><a href="/#about">À propos</a></nav>
+    <div class="nav-actions">
+      <a class="lang" href="/en/" hreflang="en" lang="en" aria-label="English">EN</a>
+      <a class="btn primary small" href="/#contact">Parlons de votre projet</a>
+    </div>
+  </div>
+</div></header>
+
+<main id="main">
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <p class="kicker">Conseil indépendant en Belgique et à l’international</p>
+    <h1>Sécuriser la technologie.<br>Faire avancer votre activité.</h1>
+    <p class="lead">Nous accompagnons les organisations en cybersécurité, architecture IT et solutions Microsoft, du conseil stratégique à la mise en œuvre opérationnelle.</p>
+    <div class="actions"><a class="btn primary" href="#contact">Parlons de votre projet</a><a class="btn ghost" href="#services">Voir les expertises</a></div>
+  </div>
+  <figure class="code-panel">
+    <div class="code-bar"><span>pim-hors-heures.kql</span><span>Sentinel · règle analytique</span></div>
+    <pre><code><span class="ln"><span class="c">// Rôle privilégié activé hors heures de bureau (UTC)</span></span><span class="ln">AuditLogs</span><span class="ln">| <span class="k">where</span> OperationName <span class="k">has</span> <span class="s">"PIM activation"</span></span><span class="ln">| <span class="k">extend</span> Actor = <span class="f">tostring</span>(InitiatedBy.user.userPrincipalName)</span><span class="ln">| <span class="k">where</span> <span class="f">hourofday</span>(TimeGenerated) <span class="k">!between</span> (7 .. 18)</span><span class="ln">| <span class="k">summarize</span> Activations = <span class="f">count</span>() <span class="k">by</span> Actor, <span class="f">bin</span>(TimeGenerated, 1d)</span></code></pre>
+    <figcaption>Exemple de règle de détection KQL pour Microsoft Sentinel.</figcaption>
+  </figure>
+</div></section>
+
+<div class="facts"><div class="wrap"><dl aria-label="Repères"><div><dt>Domaines</dt><dd>Cybersécurité, identités, cloud</dd></div><div><dt>Technologies</dt><dd>Sentinel, Defender XDR, Entra ID, Azure</dd></div><div><dt>Zone d’intervention</dt><dd>Belgique et international</dd></div><div><dt>Langues</dt><dd>Français, anglais, espagnol</dd></div></dl></div></div>
+
+<section id="services"><div class="wrap">
+  <div class="section-head"><h2>Des compétences techniques au service de vos priorités.</h2><p>Nous aidons les PME et organisations de taille intermédiaire à concevoir, sécuriser et faire évoluer leurs environnements IT.</p></div>
+  <div class="services">
+    <article class="service"><h3>Cybersécurité et SOC</h3><div><p>Nous renforçons votre capacité de détection : ingénierie de règles KQL, réduction du bruit, chasse aux menaces, réponse aux incidents et montée en maturité de votre SOC.</p><ul class="tags"><li>Microsoft Sentinel</li><li>Defender XDR</li><li>KQL</li><li>Threat hunting</li></ul></div></article>
+    <article class="service"><h3>Identités et accès</h3><div><p>Nous concevons des modèles d’administration par niveaux, sécurisons les accès privilégiés et l’authentification forte, et structurons la gouvernance des rôles dans Entra ID et Active Directory.</p><ul class="tags"><li>Entra ID</li><li>PIM</li><li>FIDO2</li><li>Defender for Identity</li></ul></div></article>
+    <article class="service"><h3>Cloud et infrastructure</h3><div><p>Nous concevons des architectures hybrides robustes et sécurisées, durcissons vos environnements et accompagnons vos migrations.</p><ul class="tags"><li>Azure</li><li>Azure Arc</li><li>Architecture</li><li>Hardening</li></ul></div></article>
+    <article class="service"><h3>Conseil en sécurité</h3><div><p>Nous évaluons votre situation, construisons une feuille de route et appuyons vos décisions d’architecture et de gouvernance.</p><ul class="tags"><li>Évaluation</li><li>Feuille de route</li><li>Gouvernance</li></ul></div></article>
+    <article class="service"><h3>Formation et transfert de compétences</h3><div><p>Nous animons des ateliers et formations techniques concrets pour rendre vos équipes autonomes sur les outils de détection et de réponse.</p><ul class="tags"><li>Ateliers</li><li>Sentinel</li><li>KQL</li><li>Defender</li></ul></div></article>
+    <article class="service" id="csp"><h3>Licences Microsoft (CSP)</h3><div><p>Nous fournissons vos licences Microsoft 365 et Azure, optimisons leur usage et accompagnons votre environnement cloud.</p><ul class="tags"><li>Microsoft 365</li><li>Azure</li><li>CSP</li><li>Licensing</li></ul></div></article>
+    </div>
+</div></section>
+
+<section class="alt" id="approach"><div class="wrap">
+  <div class="section-head"><h2>De la compréhension à l’action.</h2><p>Une démarche pragmatique, adaptée à votre contexte, avec un objectif : des résultats utiles et durables.</p></div>
+  <ol class="steps"><li class="step"><h3>Comprendre</h3><p>Vos enjeux, votre contexte et vos contraintes.</p></li><li class="step"><h3>Concevoir</h3><p>Une architecture et une feuille de route adaptées.</p></li><li class="step"><h3>Mettre en œuvre</h3><p>Des solutions concrètes, maîtrisées et documentées.</p></li><li class="step"><h3>Transmettre</h3><p>Des équipes autonomes et des compétences durables.</p></li></ol>
+</div></section>
+
+<section class="about" id="about"><div class="wrap about-grid">
+  <div>
+    <h2>Une expertise de terrain, sans complexité inutile.</h2>
+    <p class="intro">APS Consult accompagne les organisations qui veulent renforcer leur sécurité et leur environnement technologique, avec une approche indépendante, pragmatique et orientée résultats.</p>
+    <ul class="checks"><li>Vision transversale : infrastructure, identités, cloud et cybersécurité.</li><li>Expérience pratique des technologies Microsoft en environnement d’entreprise.</li><li>Transfert de compétences et accompagnement des équipes.</li></ul>
+  </div>
+  <div class="pillars"><h3>Nos engagements</h3><ul><li><strong>Pragmatisme</strong><span>Des solutions proportionnées à votre taille, votre budget et vos risques.</span></li><li><strong>Transparence</strong><span>Des livrables documentés et des décisions expliquées.</span></li><li><strong>Autonomie</strong><span>Un transfert de compétences pour que vos équipes gardent la main.</span></li><li><strong>Confidentialité</strong><span>Une discrétion totale sur vos environnements et vos données.</span></li></ul></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap contact-box">
+  <div><h2>Un défi à relever ?<br>Construisons la suite ensemble.</h2><p>Que vous prépariez un projet de cybersécurité, cherchiez à optimiser vos licences Microsoft ou souhaitiez renforcer vos équipes, échangeons sur vos besoins.</p></div>
+  <div class="contact-actions">
+    <a class="mail" href="mailto:contact@pujado.be?subject=Contact%20depuis%20pujado.be">contact@pujado.be</a>
+    <button class="btn ghost small js-only" type="button" data-copy="contact@pujado.be" data-done="Adresse copiée">Copier l’adresse</button>
+    <small>Nous répondons en français, anglais ou espagnol.</small>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap foot">
+  <div><strong>APS CONSULT.</strong><br>APS Consult SRL<br>Avenue du Clairpré 22, 1410 Waterloo<br>TVA BE 0657.805.597</div>
+  <div><ul><li><a href="/#services">Expertises</a></li><li><a href="/#approach">Approche</a></li><li><a href="/#about">À propos</a></li><li><a href="/mentions-legales.html">Mentions légales et confidentialité</a></li></ul></div>
+  <div><a href="mailto:contact@pujado.be">contact@pujado.be</a><br>© 2026 APS Consult SRL. Tous droits réservés.</div>
+  <p class="fineprint">Microsoft, Azure, Entra, Sentinel, Defender et les autres marques citées appartiennent à leurs propriétaires respectifs. Leur mention décrit les technologies sur lesquelles APS Consult intervient.</p>
+</div></footer>
+</body>
+</html>
