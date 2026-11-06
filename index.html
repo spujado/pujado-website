@@ -12,7 +12,7 @@
     a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
     .topline{height:3px;background:linear-gradient(90deg,#1679b9,#51d4ed,#8c7bff)}
     header{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:850;font-size:25px;letter-spacing:.13em}.brand span{color:var(--blue)}.brand small{display:block;font-size:9px;letter-spacing:.19em;color:var(--muted);font-weight:650;margin-top:-5px}
+    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:8px;padding-bottom:8px}.brand{display:flex;flex-direction:column;align-items:flex-start;flex:0 0 auto;font-weight:850;font-size:27px;line-height:1.05;letter-spacing:.13em;white-space:nowrap}.brand span{color:var(--blue)}.brand small{display:block;font-size:9px;line-height:1.5;letter-spacing:.17em;color:var(--muted);font-weight:650;margin-top:5px;white-space:nowrap}
     .links{display:flex;align-items:center;gap:26px;color:#c6d3e2;font-size:13px}.links a:hover{color:var(--blue)}.navright{display:flex;align-items:center;gap:12px}.lang{border:1px solid var(--line);background:transparent;color:var(--text);border-radius:8px;padding:8px 10px;cursor:pointer}.cta{display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#04111d;font-weight:800;border-radius:8px;padding:12px 18px;font-size:13px;transition:.2s}.cta:hover{transform:translateY(-2px);filter:brightness(1.08)}.menu{display:none}
     .hero{position:relative;overflow:hidden;padding:108px 0 92px;background:radial-gradient(ellipse at 80% 20%,rgba(25,128,185,.23),transparent 38%),radial-gradient(ellipse at 10% 80%,rgba(67,91,180,.13),transparent 35%),linear-gradient(135deg,#07111f,#0b1c30 58%,#07111f)}
     .hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(117,173,218,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(117,173,218,.045) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(to bottom,black,transparent 90%);pointer-events:none}
@@ -24,9 +24,9 @@
     .credential{display:flex;gap:14px;align-items:center;padding:18px;border:1px solid var(--line);border-radius:11px;background:#0d1b2b}.credential strong{display:block}.credential span{font-size:12px;color:var(--muted)}
     .contact{background:radial-gradient(ellipse at 80% 50%,rgba(23,121,177,.19),transparent 45%),#091727;border-block:1px solid var(--line)}.contact-box{display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{font-size:clamp(30px,4vw,44px);margin:10px 0}.contact p{color:var(--muted);max-width:650px}
     footer{padding:28px 0;color:#8298ae;font-size:11px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:#d9e6f3;letter-spacing:.12em}
-    [data-en]{display:none}.en [data-fr]{display:none}.en [data-en]{display:initial}.en .block-fr{display:none}.en .block-en{display:block}.block-en{display:none}
+    [hidden]{display:none!important}
     @media(max-width:850px){.links{display:none}.menu{display:inline-flex}.hero-grid,.split{grid-template-columns:1fr}.visual{min-height:300px}.cards{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.hero{padding:75px 0}.contact-box{align-items:flex-start;flex-direction:column}}
-    @media(max-width:560px){.wrap{width:min(100% - 32px,var(--max))}.nav{height:68px}.nav .cta{display:none}.hero h1{font-size:43px}.lead{font-size:16px}.cards{grid-template-columns:1fr}section{padding:66px 0}.steps{grid-template-columns:1fr 1fr}.trust-row{gap:12px}.visual{min-height:270px}}
+    @media(max-width:560px){.wrap{width:min(100% - 32px,var(--max))}.nav{min-height:72px;gap:10px}.brand{font-size:23px}.brand small{font-size:7px;letter-spacing:.13em}.nav .cta{display:none}.hero h1{font-size:43px}.lead{font-size:16px}.cards{grid-template-columns:1fr}section{padding:66px 0}.steps{grid-template-columns:1fr 1fr}.trust-row{gap:12px}.visual{min-height:270px}}
   </style>
 </head>
 <body>
@@ -75,19 +75,30 @@
 </div></section>
 
 <section id="about"><div class="wrap split">
-  <div><div class="eyebrow" data-fr>Expertise & engagement</div><div class="eyebrow" data-en>Expertise & commitment</div><div class="section-head"><h2 data-fr>Une expertise senior, sans complexité inutile.</h2><h2 data-en>Senior expertise. No unnecessary complexity.</h2><p data-fr>PUJADO accompagne les organisations qui souhaitent faire évoluer leur sécurité et leur environnement technologique avec une approche indépendante, pragmatique et orientée résultats.</p><p data-en>PUJADO supports organisations looking to strengthen their security and technology environments through independent, pragmatic and outcome-focused expertise.</p></div>
-  <div class="list"><div class="list-item"><span class="check">✓</span><span data-fr>Vision transversale : infrastructure, identité, cloud et cybersécurité.</span><span data-en>Cross-functional perspective across infrastructure, identity, cloud and cybersecurity.</span></div><div class="list-item"><span class="check">✓</span><span data-fr>Expérience pratique des technologies Microsoft en environnement d'entreprise.</span><span data-en>Hands-on experience with Microsoft technologies in enterprise environments.</span></div><div class="list-item"><span class="check">✓</span><span data-fr>Transfert de compétences et accompagnement des équipes.</span><span data-en>Knowledge transfer and team enablement.</span></div></div></div>
+  <div><div class="eyebrow" data-fr>Expertise & engagement</div><div class="eyebrow" data-en>Expertise & commitment</div><div class="section-head"><h2 data-fr>Une expertise senior, sans complexité inutile.</h2><h2 data-en>Senior expertise. No unnecessary complexity.</h2><p data-fr>Nous vous accompagnons pour faire évoluer votre sécurité et votre environnement technologique, avec une approche indépendante, pragmatique et orientée résultats.</p><p data-en>PUJADO supports organisations looking to strengthen their security and technology environments through independent, pragmatic and outcome-focused expertise.</p></div>
+  <div class="list"><div class="list-item"><span class="check">✓</span><span data-fr>Vision transversale : infrastructure, identités, cloud et cybersécurité.</span><span data-en>Cross-functional perspective across infrastructure, identity, cloud and cybersecurity.</span></div><div class="list-item"><span class="check">✓</span><span data-fr>Expérience pratique des technologies Microsoft en environnement d'entreprise.</span><span data-en>Hands-on experience with Microsoft technologies in enterprise environments.</span></div><div class="list-item"><span class="check">✓</span><span data-fr>Transfert de compétences et accompagnement des équipes.</span><span data-en>Knowledge transfer and team enablement.</span></div></div></div>
   <div class="dark-panel"><div class="eyebrow">PROFESSIONAL CREDENTIALS</div><div class="credential" style="margin-top:20px"><div class="icon">C</div><div><strong>CISSP</strong><span>Certified Information Systems Security Professional</span></div></div><div class="credential" style="margin-top:12px"><div class="icon">M</div><div><strong>Microsoft SC-100</strong><span>Cybersecurity Architect</span></div></div><p style="font-size:12px;color:var(--muted);margin:22px 0 0" data-fr>Une expertise construite sur la pratique, la veille continue et le partage de connaissances.</p><p style="font-size:12px;color:var(--muted);margin:22px 0 0" data-en>Expertise built through hands-on practice, continuous learning and knowledge sharing.</p></div>
 </div></section>
 
-<section class="contact" id="contact"><div class="wrap contact-box"><div><div class="eyebrow" data-fr>Parlons de vos projets</div><div class="eyebrow" data-en>Let's start a conversation</div><h2 data-fr>Un défi à relever ?<br>Construisons la suite ensemble.</h2><h2 data-en>Facing a challenge?<br>Let's build what's next.</h2><p data-fr>Que vous prépariez un projet de cybersécurité, cherchiez à optimiser vos licences Microsoft ou souhaitiez renforcer vos équipes, échangeons sur vos besoins.</p><p data-en>Whether you're planning a cybersecurity project, optimising Microsoft licensing or strengthening your team, let's discuss your needs.</p></div><a class="cta" href="mailto:sebastien@pujado.be?subject=Contact%20PUJADO">sebastien@pujado.be&nbsp; →</a></div></section>
+<section class="contact" id="contact"><div class="wrap contact-box"><div><div class="eyebrow" data-fr>Parlons de vos projets</div><div class="eyebrow" data-en>Let's start a conversation</div><h2 data-fr>Un défi à relever ?<br>Construisons la suite ensemble.</h2><h2 data-en>Facing a challenge?<br>Let's build what's next.</h2><p data-fr>Que vous prépariez un projet de cybersécurité, cherchiez à optimiser vos licences Microsoft ou souhaitiez renforcer vos équipes, échangeons sur vos besoins.</p><p data-en>Whether you're planning a cybersecurity project, optimising Microsoft licensing or strengthening your team, let's discuss your needs.</p></div><a class="cta" href="mailto:contact@pujado.be?subject=Contact%20PUJADO">contact@pujado.be&nbsp; →</a></div></section>
 </main>
-<footer><div class="wrap foot"><div><strong>PUJADO.</strong><br>Tech & Cybersecurity Consulting</div><div>Belgium · International<br><a href="mailto:sebastien@pujado.be">sebastien@pujado.be</a></div><div>© <span id="year"></span> PUJADO. <span data-fr>Tous droits réservés.</span><span data-en>All rights reserved.</span></div></div></footer>
+<footer><div class="wrap foot"><div><strong>PUJADO.</strong><br>Tech & Cybersecurity Consulting</div><div>Belgium · International<br><a href="mailto:contact@pujado.be">contact@pujado.be</a></div><div>© <span id="year"></span> PUJADO. <span data-fr>Tous droits réservés.</span><span data-en>All rights reserved.</span></div></div></footer>
 <script>
   const btn=document.getElementById('lang');
-  function setLang(lang){document.documentElement.classList.toggle('en',lang==='en');document.documentElement.lang=lang;btn.textContent=lang==='fr'?'EN':'FR';localStorage.setItem('pujado-lang',lang)}
+  function setLang(lang){
+    const english=lang==='en';
+    document.documentElement.lang=lang;
+    document.documentElement.classList.toggle('en',english);
+    document.querySelectorAll('[data-fr]').forEach(el=>{el.hidden=english;});
+    document.querySelectorAll('[data-en]').forEach(el=>{el.hidden=!english;});
+    btn.textContent=english?'FR':'EN';
+    btn.setAttribute('aria-label',english?'Passer en français':'Switch to English');
+    try{localStorage.setItem('pujado-lang',lang);}catch(e){}
+  }
   btn.addEventListener('click',()=>setLang(document.documentElement.classList.contains('en')?'fr':'en'));
-  setLang(localStorage.getItem('pujado-lang')||'fr');
+  let initial='fr';
+  try{initial=localStorage.getItem('pujado-lang')||'fr';}catch(e){}
+  setLang(initial);
   document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 </body></html>
