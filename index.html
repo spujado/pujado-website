@@ -3,102 +3,110 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APS Consult | Conseil en cybersécurité, architecture IT et solutions Microsoft</title>
+  <meta name="description" content="APS Consult — conseil indépendant en cybersécurité, architecture IT et solutions Microsoft (Sentinel, Defender XDR, Entra ID, Azure). Belgique et international.">
   <meta name="theme-color" content="#07111f">
-  <meta name="description" content="PUJADO — Conseil indépendant en cybersécurité, architecture IT et solutions Microsoft. Belgique et international.">
-  <title>PUJADO | Tech & Cybersecurity Consulting</title>
-  <style>
-    :root{--bg:#07111f;--panel:#0d1b2d;--panel2:#10243a;--text:#edf5ff;--muted:#a8b8cb;--blue:#47c4f2;--line:rgba(164,190,220,.16);--max:1160px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
-    a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
-    .topline{height:3px;background:linear-gradient(90deg,#1679b9,#51d4ed,#8c7bff)}
-    header{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:8px;padding-bottom:8px}.brand{display:flex;flex-direction:column;align-items:flex-start;flex:0 0 auto;font-weight:850;font-size:27px;line-height:1.05;letter-spacing:.13em;white-space:nowrap}.brand span{color:var(--blue)}.brand small{display:block;font-size:9px;line-height:1.5;letter-spacing:.17em;color:var(--muted);font-weight:650;margin-top:5px;white-space:nowrap}
-    .links{display:flex;align-items:center;gap:26px;color:#c6d3e2;font-size:13px}.links a:hover{color:var(--blue)}.navright{display:flex;align-items:center;gap:12px}.lang{border:1px solid var(--line);background:transparent;color:var(--text);border-radius:8px;padding:8px 10px;cursor:pointer}.cta{display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#04111d;font-weight:800;border-radius:8px;padding:12px 18px;font-size:13px;transition:.2s}.cta:hover{transform:translateY(-2px);filter:brightness(1.08)}.menu{display:none}
-    .hero{position:relative;overflow:hidden;padding:108px 0 92px;background:radial-gradient(ellipse at 80% 20%,rgba(25,128,185,.23),transparent 38%),radial-gradient(ellipse at 10% 80%,rgba(67,91,180,.13),transparent 35%),linear-gradient(135deg,#07111f,#0b1c30 58%,#07111f)}
-    .hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(117,173,218,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(117,173,218,.045) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(to bottom,black,transparent 90%);pointer-events:none}
-    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:center}.eyebrow{color:var(--blue);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:800}.hero h1{font-size:clamp(42px,6.1vw,74px);line-height:1.06;letter-spacing:-.045em;margin:18px 0 22px;max-width:760px}.hero h1 em{font-style:normal;color:var(--blue)}.lead{font-size:18px;color:#bdccdc;max-width:670px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}.secondary{border:1px solid rgba(179,205,231,.28);border-radius:8px;padding:11px 17px;font-size:13px;font-weight:700;color:#e0ebf7}.secondary:hover{border-color:var(--blue)}
-    .visual{position:relative;min-height:350px;border:1px solid rgba(87,180,222,.25);border-radius:18px;background:linear-gradient(145deg,rgba(19,49,76,.92),rgba(8,20,35,.95));box-shadow:0 28px 80px #0007;padding:25px;overflow:hidden}.visual:before,.visual:after{content:"";position:absolute;border:1px solid rgba(71,196,242,.23);border-radius:50%;width:310px;height:310px;right:-80px;top:15px}.visual:after{width:220px;height:220px;right:-35px;top:60px}.orbit{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--blue);box-shadow:0 0 22px var(--blue);right:80px;top:48px}.visual-label{font-size:10px;letter-spacing:.17em;color:#8baac5}.visual-title{font-size:27px;line-height:1.2;font-weight:750;max-width:230px;margin-top:35px}.visual-lines{display:grid;gap:12px;margin-top:28px}.vline{height:7px;border-radius:9px;background:linear-gradient(90deg,rgba(71,196,242,.7),rgba(71,196,242,.04));width:85%}.vline:nth-child(2){width:65%}.vline:nth-child(3){width:74%}.visual-foot{position:absolute;bottom:24px;left:25px;color:#8ca7bf;font-size:10px;letter-spacing:.12em}
-    .trust{border-block:1px solid var(--line);background:#091727}.trust-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:23px 0;color:#9fb2c8;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
-    section{padding:92px 0}.section-head{max-width:700px;margin-bottom:38px}.section-head h2{font-size:clamp(30px,4vw,45px);line-height:1.15;letter-spacing:-.03em;margin:12px 0}.section-head p{color:var(--muted);margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(150deg,#102238,#0b192a);border:1px solid var(--line);border-radius:13px;padding:25px;min-height:245px;transition:.25s}.card:hover{transform:translateY(-4px);border-color:rgba(71,196,242,.5)}.icon{width:42px;height:42px;border:1px solid rgba(71,196,242,.3);border-radius:10px;display:grid;place-items:center;color:var(--blue);font-size:19px}.card h3{font-size:18px;margin:19px 0 8px}.card p{font-size:14px;color:var(--muted);margin:0}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.tag{font-size:10px;color:#a9c5db;border:1px solid var(--line);padding:4px 8px;border-radius:5px}
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.dark-panel{background:linear-gradient(140deg,#10263c,#0b192a);border:1px solid var(--line);border-radius:16px;padding:32px}.list{display:grid;gap:17px;margin-top:25px}.list-item{display:flex;gap:13px;color:#c6d4e3;font-size:14px}.check{color:var(--blue);font-weight:900}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{border-top:2px solid #287ba5;padding:18px 14px 0}.step b{display:block;font-size:13px;margin-bottom:7px}.step p{font-size:12px;color:var(--muted);margin:0}
-    .credential{display:flex;gap:14px;align-items:center;padding:18px;border:1px solid var(--line);border-radius:11px;background:#0d1b2b}.credential strong{display:block}.credential span{font-size:12px;color:var(--muted)}
-    .contact{background:radial-gradient(ellipse at 80% 50%,rgba(23,121,177,.19),transparent 45%),#091727;border-block:1px solid var(--line)}.contact-box{display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{font-size:clamp(30px,4vw,44px);margin:10px 0}.contact p{color:var(--muted);max-width:650px}
-    footer{padding:28px 0;color:#8298ae;font-size:11px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:#d9e6f3;letter-spacing:.12em}
-    [hidden]{display:none!important}
-    @media(max-width:850px){.links{display:none}.menu{display:inline-flex}.hero-grid,.split{grid-template-columns:1fr}.visual{min-height:300px}.cards{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.hero{padding:75px 0}.contact-box{align-items:flex-start;flex-direction:column}}
-    @media(max-width:560px){.wrap{width:min(100% - 32px,var(--max))}.nav{min-height:72px;gap:10px}.brand{font-size:23px}.brand small{font-size:7px;letter-spacing:.13em}.nav .cta{display:none}.hero h1{font-size:43px}.lead{font-size:16px}.cards{grid-template-columns:1fr}section{padding:66px 0}.steps{grid-template-columns:1fr 1fr}.trust-row{gap:12px}.visual{min-height:270px}}
-  </style>
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <link rel="canonical" href="https://pujado.be/">
+  <link rel="alternate" hreflang="fr" href="https://pujado.be/">
+  <link rel="alternate" hreflang="en" href="https://pujado.be/en/">
+  <link rel="alternate" hreflang="x-default" href="https://pujado.be/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/InterDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/main.js"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="APS Consult">
+  <meta property="og:locale" content="fr_BE">
+  <meta property="og:title" content="APS Consult | Conseil en cybersécurité, architecture IT et solutions Microsoft">
+  <meta property="og:description" content="APS Consult — conseil indépendant en cybersécurité, architecture IT et solutions Microsoft (Sentinel, Defender XDR, Entra ID, Azure). Belgique et international.">
+  <meta property="og:url" content="https://pujado.be/">
+  <meta property="og:image" content="https://pujado.be/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="APS Consult — Cybersecurity and Microsoft solutions">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="APS Consult | Conseil en cybersécurité, architecture IT et solutions Microsoft">
+  <meta name="twitter:description" content="APS Consult — conseil indépendant en cybersécurité, architecture IT et solutions Microsoft (Sentinel, Defender XDR, Entra ID, Azure). Belgique et international.">
+  <meta name="twitter:image" content="https://pujado.be/assets/og-image.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"APS Consult","url":"https://pujado.be/","email":"contact@pujado.be","legalName":"APS Consult SRL","vatID":"BE0657805597","address":{"@type":"PostalAddress","streetAddress":"Avenue du Clairpré 22","postalCode":"1410","addressLocality":"Waterloo","addressCountry":"BE"},"description":"APS Consult — conseil indépendant en cybersécurité, architecture IT et solutions Microsoft (Sentinel, Defender XDR, Entra ID, Azure). Belgique et international.","areaServed":["BE","EU"],"knowsLanguage":["fr","en","es"],"knowsAbout":["Cybersecurity","Microsoft Sentinel","Microsoft Defender XDR","Microsoft Entra ID","Azure","IT architecture","Identity and access management"]}</script>
 </head>
 <body>
+<a class="skip" href="#main">Aller au contenu</a>
 <div class="topline"></div>
-<header><div class="wrap nav">
-  <a class="brand" href="#">PUJADO<span>.</span><small>TECH & CYBERSECURITY CONSULTING</small></a>
-  <nav class="links"><a href="#expertise" data-fr>Expertises</a><a href="#expertise" data-en>Expertise</a><a href="#csp">Microsoft CSP</a><a href="#approach" data-fr>Approche</a><a href="#approach" data-en>Approach</a><a href="#about" data-fr>À propos</a><a href="#about" data-en>About</a></nav>
-  <div class="navright"><button class="lang" id="lang" aria-label="Switch language">EN</button><a class="cta" href="#contact" data-fr>Parlons de votre projet</a><a class="cta" href="#contact" data-en>Discuss your project</a></div>
+<header class="site-header"><div class="wrap nav">
+  <a class="brand" href="/" aria-label="APS Consult — accueil"><b>APS CONSULT<i>.</i></b><small>Cybersécurité et solutions Microsoft</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" data-open="Menu" data-close="Fermer">Menu</button>
+  <div class="nav-panel" id="nav-panel">
+    <nav aria-label="Navigation principale"><a href="/#services">Expertises</a><a href="/#approach">Approche</a><a href="/#about">À propos</a></nav>
+    <div class="nav-actions">
+      <a class="lang" href="/en/" hreflang="en" lang="en" aria-label="English">EN</a>
+      <a class="btn primary small" href="/#contact">Parlons de votre projet</a>
+    </div>
+  </div>
 </div></header>
 
-<main>
+<main id="main">
 <section class="hero"><div class="wrap hero-grid">
   <div>
-    <div class="eyebrow" data-fr>Conseil indépendant · Belgique & international</div><div class="eyebrow" data-en>Independent consulting · Belgium & international</div>
-    <h1 data-fr>Sécuriser la technologie.<br><em>Faire avancer votre activité.</em></h1>
-    <h1 data-en>Securing technology.<br><em>Enabling business.</em></h1>
-    <p class="lead" data-fr>Expertise indépendante en cybersécurité, architecture IT et solutions Microsoft. Du conseil stratégique à la mise en œuvre opérationnelle.</p>
-    <p class="lead" data-en>Independent expertise in cybersecurity, IT architecture and Microsoft solutions — from strategic advice to hands-on implementation.</p>
-    <div class="hero-actions"><a class="cta" href="#contact" data-fr>Échanger sur vos enjeux →</a><a class="cta" href="#contact" data-en>Let's discuss your needs →</a><a class="secondary" href="#expertise" data-fr>Découvrir nos expertises</a><a class="secondary" href="#expertise" data-en>Explore our expertise</a></div>
+    <p class="kicker">Conseil indépendant en Belgique et à l’international</p>
+    <h1>Sécuriser la technologie.<br>Faire avancer votre activité.</h1>
+    <p class="lead">Nous accompagnons les organisations en cybersécurité, architecture IT et solutions Microsoft, du conseil stratégique à la mise en œuvre opérationnelle.</p>
+    <div class="actions"><a class="btn primary" href="#contact">Parlons de votre projet</a><a class="btn ghost" href="#services">Voir les expertises</a></div>
   </div>
-  <div class="visual" aria-label="Abstract cybersecurity network illustration"><div class="orbit"></div><div class="visual-label">PUJADO / SECURITY & TECHNOLOGY</div><div class="visual-title" data-fr>Une vision globale.<br>Une expertise concrète.</div><div class="visual-title" data-en>Clear perspective.<br>Practical expertise.</div><div class="visual-lines"><div class="vline"></div><div class="vline"></div><div class="vline"></div></div><div class="visual-foot">CYBERSECURITY · CLOUD · ARCHITECTURE</div></div>
+  <figure class="code-panel">
+    <div class="code-bar"><span>pim-hors-heures.kql</span><span>Sentinel · règle analytique</span></div>
+    <pre><code><span class="ln"><span class="c">// Rôle privilégié activé hors heures de bureau (UTC)</span></span><span class="ln">AuditLogs</span><span class="ln">| <span class="k">where</span> OperationName <span class="k">has</span> <span class="s">"PIM activation"</span></span><span class="ln">| <span class="k">extend</span> Actor = <span class="f">tostring</span>(InitiatedBy.user.userPrincipalName)</span><span class="ln">| <span class="k">where</span> <span class="f">hourofday</span>(TimeGenerated) <span class="k">!between</span> (7 .. 18)</span><span class="ln">| <span class="k">summarize</span> Activations = <span class="f">count</span>() <span class="k">by</span> Actor, <span class="f">bin</span>(TimeGenerated, 1d)</span></code></pre>
+    <figcaption>Exemple de règle de détection KQL pour Microsoft Sentinel.</figcaption>
+  </figure>
 </div></section>
 
-<div class="trust"><div class="wrap trust-row"><span>Cybersecurity & SOC</span><span>Microsoft Security</span><span>Cloud & Infrastructure</span><span>Identity & Access</span><span>Microsoft CSP</span></div></div>
+<div class="facts"><div class="wrap"><dl aria-label="Repères"><div><dt>Domaines</dt><dd>Cybersécurité, identités, cloud</dd></div><div><dt>Technologies</dt><dd>Sentinel, Defender XDR, Entra ID, Azure</dd></div><div><dt>Zone d’intervention</dt><dd>Belgique et international</dd></div><div><dt>Langues</dt><dd>Français, anglais, espagnol</dd></div></dl></div></div>
 
-<section id="expertise"><div class="wrap">
-  <div class="section-head"><div class="eyebrow" data-fr>Nos expertises</div><div class="eyebrow" data-en>What we do</div><h2 data-fr>Des compétences techniques au service de vos priorités.</h2><h2 data-en>Technical expertise aligned with your business priorities.</h2><p data-fr>Nous aidons les PME et organisations de taille intermédiaire à concevoir, sécuriser et faire évoluer leurs environnements IT.</p><p data-en>We help SMEs and mid-market organisations design, secure and evolve their IT environments.</p></div>
-  <div class="cards">
-    <article class="card"><div class="icon">⌁</div><h3>Cybersecurity & SOC</h3><p data-fr>Renforcer la détection, la réponse aux incidents et la maturité opérationnelle de votre sécurité.</p><p data-en>Improve threat detection, incident response and the operational maturity of your security function.</p><div class="tags"><span class="tag">Microsoft Sentinel</span><span class="tag">Defender XDR</span><span class="tag">KQL</span><span class="tag">Threat Hunting</span></div></article>
-    <article class="card"><div class="icon">◈</div><h3>Cloud & Infrastructure</h3><p data-fr>Concevoir des architectures robustes, sécurisées et adaptées aux environnements hybrides.</p><p data-en>Design resilient, secure architectures for modern and hybrid environments.</p><div class="tags"><span class="tag">Azure</span><span class="tag">Azure Arc</span><span class="tag">Architecture</span><span class="tag">Hardening</span></div></article>
-    <article class="card"><div class="icon">◎</div><h3>Identity & Access</h3><p data-fr>Sécuriser les identités, les accès privilégiés et les parcours d'authentification.</p><p data-en>Secure identities, privileged access and authentication journeys.</p><div class="tags"><span class="tag">Entra ID</span><span class="tag">IAM</span><span class="tag">Defender for Identity</span></div></article>
-    <article class="card" id="csp"><div class="icon">▦</div><h3>Microsoft CSP & Licensing</h3><p data-fr>Fourniture de licences Microsoft, conseil, optimisation et accompagnement de votre environnement cloud.</p><p data-en>Microsoft license procurement, licensing advice, optimisation and support for your cloud environment.</p><div class="tags"><span class="tag">Microsoft 365</span><span class="tag">Azure</span><span class="tag">CSP</span><span class="tag">Licensing</span></div></article>
-    <article class="card"><div class="icon">⌘</div><h3>Security Advisory</h3><p data-fr>Évaluer vos enjeux, définir une feuille de route et accompagner les décisions d'architecture et de sécurité.</p><p data-en>Assess your challenges, define a roadmap and support security and architecture decisions.</p><div class="tags"><span class="tag">Assessment</span><span class="tag">Roadmap</span><span class="tag">Governance</span></div></article>
-    <article class="card"><div class="icon">▤</div><h3>Training & Knowledge Transfer</h3><p data-fr>Développer l'autonomie de vos équipes grâce à des formations et ateliers techniques concrets.</p><p data-en>Build your team's capabilities through practical technical training and workshops.</p><div class="tags"><span class="tag">Workshops</span><span class="tag">Sentinel</span><span class="tag">KQL</span><span class="tag">Defender</span></div></article>
+<section id="services"><div class="wrap">
+  <div class="section-head"><h2>Des compétences techniques au service de vos priorités.</h2><p>Nous aidons les PME et organisations de taille intermédiaire à concevoir, sécuriser et faire évoluer leurs environnements IT.</p></div>
+  <div class="services">
+    <article class="service"><h3>Cybersécurité et SOC</h3><div><p>Nous renforçons votre capacité de détection : ingénierie de règles KQL, réduction du bruit, chasse aux menaces, réponse aux incidents et montée en maturité de votre SOC.</p><ul class="tags"><li>Microsoft Sentinel</li><li>Defender XDR</li><li>KQL</li><li>Threat hunting</li></ul></div></article>
+    <article class="service"><h3>Identités et accès</h3><div><p>Nous concevons des modèles d’administration par niveaux, sécurisons les accès privilégiés et l’authentification forte, et structurons la gouvernance des rôles dans Entra ID et Active Directory.</p><ul class="tags"><li>Entra ID</li><li>PIM</li><li>FIDO2</li><li>Defender for Identity</li></ul></div></article>
+    <article class="service"><h3>Cloud et infrastructure</h3><div><p>Nous concevons des architectures hybrides robustes et sécurisées, durcissons vos environnements et accompagnons vos migrations.</p><ul class="tags"><li>Azure</li><li>Azure Arc</li><li>Architecture</li><li>Hardening</li></ul></div></article>
+    <article class="service"><h3>Conseil en sécurité</h3><div><p>Nous évaluons votre situation, construisons une feuille de route et appuyons vos décisions d’architecture et de gouvernance.</p><ul class="tags"><li>Évaluation</li><li>Feuille de route</li><li>Gouvernance</li></ul></div></article>
+    <article class="service"><h3>Formation et transfert de compétences</h3><div><p>Nous animons des ateliers et formations techniques concrets pour rendre vos équipes autonomes sur les outils de détection et de réponse.</p><ul class="tags"><li>Ateliers</li><li>Sentinel</li><li>KQL</li><li>Defender</li></ul></div></article>
+    <article class="service" id="csp"><h3>Licences Microsoft (CSP)</h3><div><p>Nous fournissons vos licences Microsoft 365 et Azure, optimisons leur usage et accompagnons votre environnement cloud.</p><ul class="tags"><li>Microsoft 365</li><li>Azure</li><li>CSP</li><li>Licensing</li></ul></div></article>
+    </div>
+</div></section>
+
+<section class="alt" id="approach"><div class="wrap">
+  <div class="section-head"><h2>De la compréhension à l’action.</h2><p>Une démarche pragmatique, adaptée à votre contexte, avec un objectif : des résultats utiles et durables.</p></div>
+  <ol class="steps"><li class="step"><h3>Comprendre</h3><p>Vos enjeux, votre contexte et vos contraintes.</p></li><li class="step"><h3>Concevoir</h3><p>Une architecture et une feuille de route adaptées.</p></li><li class="step"><h3>Mettre en œuvre</h3><p>Des solutions concrètes, maîtrisées et documentées.</p></li><li class="step"><h3>Transmettre</h3><p>Des équipes autonomes et des compétences durables.</p></li></ol>
+</div></section>
+
+<section class="about" id="about"><div class="wrap about-grid">
+  <div>
+    <h2>Une expertise de terrain, sans complexité inutile.</h2>
+    <p class="intro">APS Consult accompagne les organisations qui veulent renforcer leur sécurité et leur environnement technologique, avec une approche indépendante, pragmatique et orientée résultats.</p>
+    <ul class="checks"><li>Vision transversale : infrastructure, identités, cloud et cybersécurité.</li><li>Expérience pratique des technologies Microsoft en environnement d’entreprise.</li><li>Transfert de compétences et accompagnement des équipes.</li></ul>
+  </div>
+  <div class="pillars"><h3>Nos engagements</h3><ul><li><strong>Pragmatisme</strong><span>Des solutions proportionnées à votre taille, votre budget et vos risques.</span></li><li><strong>Transparence</strong><span>Des livrables documentés et des décisions expliquées.</span></li><li><strong>Autonomie</strong><span>Un transfert de compétences pour que vos équipes gardent la main.</span></li><li><strong>Confidentialité</strong><span>Une discrétion totale sur vos environnements et vos données.</span></li></ul></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap contact-box">
+  <div><h2>Un défi à relever ?<br>Construisons la suite ensemble.</h2><p>Que vous prépariez un projet de cybersécurité, cherchiez à optimiser vos licences Microsoft ou souhaitiez renforcer vos équipes, échangeons sur vos besoins.</p></div>
+  <div class="contact-actions">
+    <a class="mail" href="mailto:contact@pujado.be?subject=Contact%20depuis%20pujado.be">contact@pujado.be</a>
+    <button class="btn ghost small js-only" type="button" data-copy="contact@pujado.be" data-done="Adresse copiée">Copier l’adresse</button>
+    <small>Nous répondons en français, anglais ou espagnol.</small>
   </div>
 </div></section>
-
-<section style="background:#091727" id="approach"><div class="wrap">
-  <div class="section-head"><div class="eyebrow" data-fr>Notre approche</div><div class="eyebrow" data-en>How we work</div><h2 data-fr>De la compréhension à l'action.</h2><h2 data-en>From understanding to action.</h2><p data-fr>Une démarche pragmatique, adaptée à votre contexte, avec un objectif : produire des résultats utiles et durables.</p><p data-en>A pragmatic approach shaped around your context, focused on meaningful and lasting outcomes.</p></div>
-  <div class="steps">
-    <div class="step"><b data-fr>01 · Comprendre</b><b data-en>01 · Understand</b><p data-fr>Vos enjeux, votre contexte et vos contraintes.</p><p data-en>Your objectives, context and constraints.</p></div>
-    <div class="step"><b data-fr>02 · Concevoir</b><b data-en>02 · Design</b><p data-fr>Une architecture et une feuille de route adaptées.</p><p data-en>A tailored architecture and roadmap.</p></div>
-    <div class="step"><b data-fr>03 · Mettre en œuvre</b><b data-en>03 · Deliver</b><p data-fr>Des solutions concrètes, maîtrisées et documentées.</p><p data-en>Practical, controlled and documented solutions.</p></div>
-    <div class="step"><b data-fr>04 · Transmettre</b><b data-en>04 · Empower</b><p data-fr>Des équipes autonomes et des compétences durables.</p><p data-en>Empowered teams and sustainable skills.</p></div>
-  </div>
-</div></section>
-
-<section id="about"><div class="wrap split">
-  <div><div class="eyebrow" data-fr>Expertise & engagement</div><div class="eyebrow" data-en>Expertise & commitment</div><div class="section-head"><h2 data-fr>Une expertise senior, sans complexité inutile.</h2><h2 data-en>Senior expertise. No unnecessary complexity.</h2><p data-fr>Nous vous accompagnons pour faire évoluer votre sécurité et votre environnement technologique, avec une approche indépendante, pragmatique et orientée résultats.</p><p data-en>PUJADO supports organisations looking to strengthen their security and technology environments through independent, pragmatic and outcome-focused expertise.</p></div>
-  <div class="list"><div class="list-item"><span class="check">✓</span><span data-fr>Vision transversale : infrastructure, identités, cloud et cybersécurité.</span><span data-en>Cross-functional perspective across infrastructure, identity, cloud and cybersecurity.</span></div><div class="list-item"><span class="check">✓</span><span data-fr>Expérience pratique des technologies Microsoft en environnement d'entreprise.</span><span data-en>Hands-on experience with Microsoft technologies in enterprise environments.</span></div><div class="list-item"><span class="check">✓</span><span data-fr>Transfert de compétences et accompagnement des équipes.</span><span data-en>Knowledge transfer and team enablement.</span></div></div></div>
-  <div class="dark-panel"><div class="eyebrow">PROFESSIONAL CREDENTIALS</div><div class="credential" style="margin-top:20px"><div class="icon">C</div><div><strong>CISSP</strong><span>Certified Information Systems Security Professional</span></div></div><div class="credential" style="margin-top:12px"><div class="icon">M</div><div><strong>Microsoft SC-100</strong><span>Cybersecurity Architect</span></div></div><p style="font-size:12px;color:var(--muted);margin:22px 0 0" data-fr>Une expertise construite sur la pratique, la veille continue et le partage de connaissances.</p><p style="font-size:12px;color:var(--muted);margin:22px 0 0" data-en>Expertise built through hands-on practice, continuous learning and knowledge sharing.</p></div>
-</div></section>
-
-<section class="contact" id="contact"><div class="wrap contact-box"><div><div class="eyebrow" data-fr>Parlons de vos projets</div><div class="eyebrow" data-en>Let's start a conversation</div><h2 data-fr>Un défi à relever ?<br>Construisons la suite ensemble.</h2><h2 data-en>Facing a challenge?<br>Let's build what's next.</h2><p data-fr>Que vous prépariez un projet de cybersécurité, cherchiez à optimiser vos licences Microsoft ou souhaitiez renforcer vos équipes, échangeons sur vos besoins.</p><p data-en>Whether you're planning a cybersecurity project, optimising Microsoft licensing or strengthening your team, let's discuss your needs.</p></div><a class="cta" href="mailto:contact@pujado.be?subject=Contact%20PUJADO">contact@pujado.be&nbsp; →</a></div></section>
 </main>
-<footer><div class="wrap foot"><div><strong>PUJADO.</strong><br>Tech & Cybersecurity Consulting</div><div>Belgium · International<br><a href="mailto:contact@pujado.be">contact@pujado.be</a></div><div>© <span id="year"></span> PUJADO. <span data-fr>Tous droits réservés.</span><span data-en>All rights reserved.</span></div></div></footer>
-<script>
-  const btn=document.getElementById('lang');
-  function setLang(lang){
-    const english=lang==='en';
-    document.documentElement.lang=lang;
-    document.documentElement.classList.toggle('en',english);
-    document.querySelectorAll('[data-fr]').forEach(el=>{el.hidden=english;});
-    document.querySelectorAll('[data-en]').forEach(el=>{el.hidden=!english;});
-    btn.textContent=english?'FR':'EN';
-    btn.setAttribute('aria-label',english?'Passer en français':'Switch to English');
-    try{localStorage.setItem('pujado-lang',lang);}catch(e){}
-  }
-  btn.addEventListener('click',()=>setLang(document.documentElement.classList.contains('en')?'fr':'en'));
-  let initial='fr';
-  try{initial=localStorage.getItem('pujado-lang')||'fr';}catch(e){}
-  setLang(initial);
-  document.getElementById('year').textContent=new Date().getFullYear();
-</script>
-</body></html>
+<footer><div class="wrap foot">
+  <div><strong>APS CONSULT.</strong><br>APS Consult SRL<br>Avenue du Clairpré 22, 1410 Waterloo<br>TVA BE 0657.805.597</div>
+  <div><ul><li><a href="/#services">Expertises</a></li><li><a href="/#approach">Approche</a></li><li><a href="/#about">À propos</a></li><li><a href="/mentions-legales.html">Mentions légales et confidentialité</a></li></ul></div>
+  <div><a href="mailto:contact@pujado.be">contact@pujado.be</a><br>© 2026 APS Consult SRL. Tous droits réservés.</div>
+  <p class="fineprint">Microsoft, Azure, Entra, Sentinel, Defender et les autres marques citées appartiennent à leurs propriétaires respectifs. Leur mention décrit les technologies sur lesquelles APS Consult intervient.</p>
+</div></footer>
+</body>
+</html>
